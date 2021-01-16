@@ -12,7 +12,7 @@
 
 /**
  * 
- * Elisa Interpreter Prototype v1
+ * Elisa Assembler Prototype v1
  * 
  * Experiment purpose:
  *  Determine whether the Elisa system is suitable for modelling an average computer
@@ -34,12 +34,8 @@
  *      (we know that the output of optimisation is probably correct, but applying those changes in-tree
  *          is a massive pain, so we'll have to re-lex and re-parse the file)
  *   - Output
- *      (The plan is to JIT the code, simply because a native interpreter is a pain in the butt.
- *          Note that the plan may not be the final solution)
- *  
- * The design choices here mean that the interpreter is more alike to a BASIC interpreter than a Python interpreter.
- *  That meaning, you'll need to write the target code in full, where it is then interpreted line-by-line.
- *  
+ *      (generated in a platform specific way - PECOFF32+, PECOFF32, ELF, ELF64, or Mach-O)
+
  * 
  * The lexer and parser system will be taken from Erythro, as this is literally just a prototype.
  * 
@@ -73,7 +69,7 @@ int main(int argc, char* argv[]) {
 
     OptimiseTree(&ParseTree);
 
-    Interpret(&ParseTree);
+    Link(&ParseTree);
 
     fclose(SourceFile);
     fclose(OutputFile);

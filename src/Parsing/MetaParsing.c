@@ -9,12 +9,12 @@
 
 /**
  * 
- * Elisa Interpreter Prototype v1
+ * Elisa Assembler Prototype v1
  * 
  * Meta Parsing Functions
  * 
  * As per the Elisa Specification v3.5, the META keyword
- *  is to be used to convey extra information to the interpreter
+ *  is to be used to convey extra information to the assembler
  *   about how the program is to be treated.
  * 
  * It also serves to allow some of the parsing work to be
