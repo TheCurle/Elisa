@@ -1,0 +1,8 @@
+site_name: Proto Specification
+site_url: https://proto.gemwire.uk/
+nav:
+    - Condensed: index.md
+    - Directives: directive.md
+    - Type System: types.md
+    - Flow: flow.md
+theme: material
